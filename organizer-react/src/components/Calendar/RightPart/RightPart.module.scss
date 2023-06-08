@@ -1,0 +1,117 @@
+.full {
+  height: 90vh;
+}
+
+.scroll {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .table {
+    position: sticky;
+    table-layout: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    th {
+      background-color: #26282A;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .timeColumn {
+      color: white;
+      font-size: 14px;
+      width: 4.5%;
+      padding: 0;
+    }
+
+    tr.subLine > * {
+      border-top: 1px dashed #3f3f3f;
+
+    }
+
+    tr.line > * {
+      border-top: 1px solid #484848;
+
+    }
+
+    td {
+
+      font-size: 14px;
+      color: transparent;
+      //1px solid #3f3f3f
+      border: {
+        //radius: 10%;
+        left: 1px solid #3f3f3f;
+        right: 1px solid #3f3f3f;
+      }
+      height: 5px;
+      word-break: break-all;
+
+      &.clearLines {
+        border: {
+          top: 1px solid transparent;
+          left: 1px solid #3f3f3f;
+          right: 1px solid #3f3f3f;
+        }
+      }
+
+      &.begin {
+        color: white;
+
+        & > * {
+          font-size: 14px;
+          z-index: 1;
+          padding: 0;
+          margin: -3px;
+          position: absolute;
+          width: 14.2%;
+        }
+
+        border-top: {
+          right-radius: 40%;
+          left-radius: 40%;
+        }
+      }
+
+      &.end {
+        border-bottom: {
+          right-radius: 40%;
+          left-radius: 40%;
+        }
+      }
+
+      &:hover {
+        color: white;
+        background-color: #73c229;
+      }
+
+      &.newSelection {
+      }
+      &.current {
+        background-color: red;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+    &-thumb {
+      background-color: #606060;
+      border-radius: 8px;
+    }
+
+    &-track {
+      background-color: #444444;
+      border-radius: 8px;
+    }
+  }
+}
+
+

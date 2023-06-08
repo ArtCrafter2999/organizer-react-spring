@@ -1,0 +1,85 @@
+%text {
+
+  //color: white;
+  margin: 0;
+}
+
+.bigDate {
+  @extend %text;
+  font-size: 160px;
+}
+
+.smallTitles {
+  @extend %text;
+  font-size: 30px;
+}
+
+.mediumTime {
+  @extend %text;
+  font-size: 50px;
+}
+
+.calendarPanel {
+  display: inline-flex;
+  .calendarTitle {
+    width: 200px;
+    @extend %text;
+    font: {
+      size: 30px;
+      weight: bold;
+    }
+  }
+  .panelButtons{
+    width: 50px;
+    background-color: #26282A;
+    border: 3px solid transparent{
+      radius:10%
+    }
+    &:hover{
+      border: 3px solid transparent{
+        radius:10%
+      }
+      background-color: #606060;
+    }
+  }
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 30px 10px 10px;
+  border: 3px solid transparent {
+    radius: 10%;
+  }
+  &:hover {
+    background-color: #606060;
+  }
+}
+
+.calendarTable {
+  width: 100%;
+  text-align: center;
+
+  th {
+    font: {
+      family: Calibri, serif;
+      size: 20px;
+      weight: bold;
+    }
+  }
+
+  td {
+    padding: 1px;
+  }
+}

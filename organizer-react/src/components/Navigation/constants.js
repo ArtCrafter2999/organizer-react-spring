@@ -1,0 +1,5 @@
+export const MENU_TYPES_ACTION = {
+  MENU_OPEN: 'MENU_OPEN',
+  MENU_CLOSE: 'MENU_CLOSE'
+}
+

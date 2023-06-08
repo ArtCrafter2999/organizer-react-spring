@@ -1,0 +1,8 @@
+body {
+    background-color: #1D1F20;
+}
+* {
+    font-family: Calibri, serif;
+    color: white;
+    user-select: none;
+}
